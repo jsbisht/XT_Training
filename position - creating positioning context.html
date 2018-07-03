@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creating positioning context</title>
+    <style>
+        body {
+            background: grey;
+        }
+        .content {
+            background: red;
+            margin: auto;
+            height: 200px;
+            width: 400px;
+            /* position: relative; */
+        }
+        .child-content {
+            background: brown;
+            height: 100px;
+            width: 100%;
+        }
+        .child-ka-child {
+            background: green;
+            height: 50px;
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="child-content">
+            <div class="child-ka-child"></div>
+        </div>
+    </div>
+</body>
+</html>
