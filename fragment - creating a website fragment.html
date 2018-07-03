@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creating website fragment</title>
+    <style>
+        body {
+            background: grey;
+        }
+        .content {
+            background: white;
+            margin: auto;
+            width: 500px;
+        }
+        .thumb .image {
+            height: 100px;
+            width: 100px;
+        }
+        .thumb, .preview {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .preview {
+            width: calc(100% - 120px);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <article>
+            <div class="thumb">
+                <img src="img/thumb-fragment.jpg" alt="" class="image">
+            </div>
+            <div class="preview">
+                <div class="title">
+                    <h2 class="article-title">This is supposed to be nice title</h2>
+                </div>
+                <div class="article-info">
+                    <span class="author">Jagdeep</span> on <span class="article-date">Sep 23rd 2011</span> with <span class="no-of-comments">44 comments</span>
+                </div>
+                <div class="summary">
+                    <p>This section would contain summary about the article. Dont read hereafter as i am writing craf over here just to fill up some space. Who knew i would have to do all this.</p>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
