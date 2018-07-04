@@ -1,0 +1,121 @@
+/**
+ * OVERRIDES
+ */
+input[type="text"] {
+    border: none;
+    outline: none;
+}
+
+/**
+ * STYLES
+ */
+.page-container {
+    background: #efefef;
+    margin: auto;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    height: 100px;
+    background: red;
+}
+
+.content {
+    
+    position: relative;
+}
+
+.content .hero-unit .resort-photo {
+    background-size: cover;
+    background-image: url(http://vimages.vresorts.in/1200x600/assets/campaign/goa-lp1.jpg);
+    height: 300px;
+}
+
+.content .hero-unit .description {
+    position: absolute;
+    top: 0;
+}
+
+.content .hero-unit .description .quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    color: white;
+    position: absolute;
+    padding-left: 40px;
+    top: 60px;
+    width: 300px;
+    z-index: 20;
+}
+
+.content .hero-unit .description .quote .offer {
+    font-size: 0.6em;
+}
+
+.content .info {
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    margin: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+    .content .info {
+        width: 1200px;
+    }
+}
+
+.content .info .info-section {
+    /* flex-basis: 50%; */
+}
+
+.content .info .info-section.about {
+    padding: 40px;
+}
+
+.content .info .info-section.contact {
+}
+.content .info .info-section.contact .reference {
+    margin: 20px;
+}
+
+.content .info .info-section.contact .connect {
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    background: white;
+}
+
+.button-block {
+    width: 200px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.button-block.green {
+    background: lightgreen;
+}
+
+.button-block.black {
+    background: #777777;
+    color: white;
+}
+
+.slanted {
+    height: 300px;
+    position: absolute;
+    top: 0;
+    background: black;
+    width: 400px;
+    z-index: 10;
+}
+
+footer {
+    height: 200px;
+    background: grey;
+}
+
+.link {
+    display: inline-block;
+}
