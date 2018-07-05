@@ -11,11 +11,57 @@ input[type="text"] {
  */
 .container {
     margin: auto;
+    padding: 0 12px;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 700px;
+    }
+    
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        width: 900px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     .container {
         width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .flexible-d {
+        flex-direction: column;
+    }
+    .flexible-child-d {
+        flex-basis: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .flexible-t {
+        flex-direction: column;
+    }
+    .flexible-child-t {
+        flex-basis: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .flexible-m {
+        flex-direction: column;
+    }
+
+    .flexible-child-m {
+        flex-basis: 100% !important;
+    }
+
+    .full-width {
+        width: 100%;
     }
 }
 
@@ -33,7 +79,6 @@ body {
 }
 
 header {
-    height: 100px;
     background: #9c1d1d;
     width: 100%;
     position: fixed;
@@ -56,11 +101,27 @@ header .identity .links {
     text-align: right;
 }
 
+@media only screen and (max-width: 767px) {
+    header .identity .links {
+        display: none;
+    }
+}
+
 header .identity .links .link {
     display: inline;
     padding: 30px;
     cursor: pointer;
     color: white;
+}
+
+header .identity .links .link:last-child {
+    padding-right: 0px;
+}
+
+@media only screen and (max-width: 960px) {
+    header .identity .links .link {
+        padding: 5px;
+    }
 }
 
 header .identity .logo {
@@ -69,7 +130,7 @@ header .identity .logo {
 }
 
 .content {   
-    margin-top: 100px;
+    margin-top: 88px;
 }
 
 .content .hero-unit {
@@ -85,6 +146,12 @@ header .identity .logo {
 .content .hero-unit .description {
     position: absolute;
     top: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .content .hero-unit .description {
+        display: none;
+    }
 }
 
 .content .hero-unit .description .quote {
@@ -121,6 +188,15 @@ header .identity .logo {
     padding: 20px;
     margin: 20px;
     background: white;
+}
+
+@media only screen and (max-width: 767px) {
+    .content .info .info-section.about {
+        padding: 20px 20px 20px 8px;
+    }
+    .content .info .info-section.contact .connect {
+        margin: 0 auto 20px !important;
+    }
 }
 
 .button-block {
@@ -189,8 +265,9 @@ header .identity .logo {
 .offerings .feature {
     display: flex;
     flex-basis: 32%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
+
 .thumbnail .image {
     background: url(img/thumb-fragment.jpg);
     height: 200px;
@@ -199,7 +276,6 @@ header .identity .logo {
 }
 
 footer {
-    height: 150px;
     background: black;
     color: white;
 }
@@ -207,7 +283,6 @@ footer {
 footer .end-note {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
 }
 
 footer .end-note .about-us {
