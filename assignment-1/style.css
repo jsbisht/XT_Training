@@ -1,362 +1,381 @@
 /**
- * OVERRIDES
+ * 1. BASE
  */
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
 input[type="text"] {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 
 /**
- * UTILITY
+ * 2. LAYOUT
+ */
+@media only screen and (max-width: 767px) {
+  header,
+  footer,
+  .content {
+    padding: 0 12px;
+  }
+}
+
+/**
+ * Utility
  */
 .container {
-    margin: auto;
-    padding: 0 12px;
+  margin: auto;
+  padding: 0 12px;
 }
 
 @media only screen and (max-width: 767px) {
-    .container {
-        width: 100%;
-        padding: 0;
-    } 
+  .container {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    .container {
-        width: 700px;
-    } 
+  .container {
+    width: 700px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-    .container {
-        width: 900px;
-    }
+  .container {
+    width: 900px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
-    .container {
-        width: 1200px;
-    }
+  .container {
+    width: 1200px;
+  }
 }
 
 @media only screen and (max-width: 1199px) {
-    .flexible-d {
-        flex-direction: column;
-    }
-    .flexible-child-d {
-        flex-basis: 100% !important;
-    }
+  .flexible-d {
+    flex-direction: column;
+  }
+  .flexible-child-d {
+    flex-basis: 100% !important;
+  }
 }
 
 @media only screen and (max-width: 992px) {
-    .flexible-t {
-        flex-direction: column;
-    }
-    .flexible-child-t {
-        flex-basis: 100% !important;
-    }
-    .full-width-t {
-        width: 100% !important;
-    }
+  .flexible-t {
+    flex-direction: column;
+  }
+  .flexible-child-t {
+    flex-basis: 100% !important;
+  }
+  .full-width-t {
+    width: 100% !important;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .flexible-m {
-        flex-direction: column;
-    }
+  .flexible-m {
+    flex-direction: column;
+  }
 
-    .flexible-child-m {
-        flex-basis: 100% !important;
-    }
+  .flexible-child-m {
+    flex-basis: 100% !important;
+  }
 
-    .full-width-m {
-        width: 100% !important;
-    }
+  .full-width-m {
+    width: 100% !important;
+  }
 }
 
 /**
- * STYLES
+ * 3. MODULE
  */
-@media only screen and (max-width: 767px) {
-    header, footer, .content {
-        padding: 0 12px;
-    }
-}
-
-body {
-    margin: 0;
-    font-family: 'Nunito', sans-serif;
-}
-
-header {
-    background: #9c1d1d;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
-
-header .identity {
-    display: flex;
-    justify-content: space-around;
-}
-
-header .identity .logo, header .identity .links {
-    align-self: center;
-    flex-basis: 50%;
-}
-
-header .identity .links {
-    text-align: right;
-}
-
-@media only screen and (max-width: 767px) {
-    header .identity .links {
-        display: none;
-    }
-}
-
-header .identity .links .link {
-    display: inline;
-    padding: 30px;
-}
-
-header .identity .links .link a {
-    color: white;
-    text-decoration: none;
-}
-
-header .identity .links .link:last-child {
-    padding-right: 0px;
-}
-
-@media only screen and (max-width: 960px) {
-    header .identity .links .link {
-        padding: 5px;
-    }
-}
-
-header .identity .logo {
-    color: white;
-    font-family: 'Cinzel', cursive;
-}
-
-.content {
-    background: #efefef;
-    margin-top: 86px;
-}
-
-.content .hero-unit {
-    position: relative;
-}
-
-.content .hero-unit .resort-photo {
-    background-size: cover;
-    background-image: url(http://vimages.vresorts.in/1200x600/assets/campaign/goa-lp1.jpg);
-    height: 500px;
-}
-
-.content .hero-unit .description .slanted {
-    height: 500px;
-    position: absolute;
-    top: 0;
-    background: black;
-    width: 400px;
-    z-index: 10;
-}
-
-.content .hero-unit .description {
-    position: absolute;
-    top: 0;
-}
-
-@media only screen and (max-width: 767px) {
-    .content .hero-unit .description {
-        display: none;
-    }
-}
-
-.content .hero-unit .description .quote {
-    font-family: 'Playfair Display', serif;
-    font-size: 2em;
-    color: white;
-    position: absolute;
-    padding-left: 40px;
-    top: 160px;
-    width: 300px;
-    z-index: 20;
-}
-
-.content .hero-unit .description .quote .offer {
-    font-size: 0.6em;
-    font-family: 'Nunito', sans-serif;
-}
-
-.content .why-us {
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
-
-.content .why-us .statement {
-    text-align: center;
-    font-size: 3em;
-}
-
-.content .why-us .our-testimony {
-    text-align: center;
-    width: 700px;
-    margin: auto;
-    font-size: 1.2em;
-}
-
-.content .info {
-    display: flex;
-    font-family: 'Nunito', sans-serif;
-    align-items: center;
-}
-
-.content .info .info-section.about {
-    padding: 40px;
-}
-
-.content .info .info-section.contact .reference {
-    margin: 20px;
-}
-
-.content .info .info-section.contact .connect {
-    width: 250px;
-    padding: 20px;
-    margin: 20px;
-    background: white;
-}
-
-@media only screen and (max-width: 767px) {
-    .content .info .info-section.about {
-        padding: 0;
-    }
-    .content .info .info-section.contact .connect {
-        margin: 0 auto 20px !important;
-    }
-}
-
 .button-block {
-    width: 200px;
-    text-align: center;
-    padding: 10px 0;
+  width: 200px;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .button-block.green {
-    background: lightgreen;
+  background: lightgreen;
 }
 
 .button-block.black {
-    background: #777777;
-    color: white;
-}
-
-.offerings {
-    background: mistyrose;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-@media only screen and (max-width: 767px) {
-    .offerings {
-        background: none;
-        border-bottom: 1px dashed black;
-        border-top: 1px dashed black;
-        padding-bottom: 0;
-    }
-}
-
-.offerings .features {
-    display: flex;
-    justify-content: space-between;
-}
-
-.offering-title {
-    flex-basis: 100%;
-    padding-bottom: 40px;
-}
-
-.offering-title .title {
-    margin: 0;
-    font-size: 2em;
-}
-
-.offerings .feature .thumbnail {
-    margin-right: 10px;
-}
-
-.offerings .feature .details .about {
-    font-size: 14px;
-}
-
-.offerings .feature .details .title {
-    margin-top: 0;
+  background: #777777;
+  color: white;
 }
 
 .view-more {
-    text-decoration: none;
-    color: #555;
+  text-decoration: none;
+  color: #555;
 }
 
 .view-more::after {
-    content: "  >>";
-}
-
-.offerings .feature {
-    display: flex;
-    flex-basis: 32%;
-    margin-bottom: 50px;
+  content: "  >>";
 }
 
 .thumbnail .image {
-    height: 200px;
-    width: 200px;
-    background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  background-repeat: no-repeat;
 }
 
 .thumbnail .image.location-1 {
-    background: url(http://vimages.vresorts.in/150x150/experience/5a183736e2b5024c578b460c/images/small/goa1000x1000-1511536438.jpg);
+  background: url(http://vimages.vresorts.in/150x150/experience/5a183736e2b5024c578b460c/images/small/goa1000x1000-1511536438.jpg);
 }
 
 .thumbnail .image.location-2 {
-    background: url(https://vimages.vresorts.in/150x150/experience/5a140561e2b5024e578b4578/images/small/goacuisine1000x1000-1511261541.jpg);
+  background: url(https://vimages.vresorts.in/150x150/experience/5a140561e2b5024e578b4578/images/small/goacuisine1000x1000-1511261541.jpg);
 }
 
 .thumbnail .image.location-3 {
-    background: url(https://vimages.vresorts.in/150x150/experience/5a15487de2b50247598b4573/images/small/goaarts1000x1000-1511346290.jpg);
+  background: url(https://vimages.vresorts.in/150x150/experience/5a15487de2b50247598b4573/images/small/goaarts1000x1000-1511346290.jpg);
 }
 
+/**
+ * 4. STATE
+ */
+
+/**
+ * header
+ */
+header {
+  background: #9c1d1d;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+header .identity {
+  display: flex;
+  justify-content: space-around;
+}
+
+header .identity .logo,
+header .identity .links {
+  align-self: center;
+  flex-basis: 50%;
+}
+
+header .identity .links {
+  text-align: right;
+}
+
+@media only screen and (max-width: 767px) {
+  header .identity .links {
+    display: none;
+  }
+}
+
+header .identity .links .link {
+  display: inline;
+  padding: 30px;
+}
+
+header .identity .links .link a {
+  color: white;
+  text-decoration: none;
+}
+
+header .identity .links .link:last-child {
+  padding-right: 0px;
+}
+
+@media only screen and (max-width: 960px) {
+  header .identity .links .link {
+    padding: 5px;
+  }
+}
+
+header .identity .logo {
+  color: white;
+  font-family: "Cinzel", cursive;
+}
+
+/**
+ * content
+ */
+.content {
+  background: #efefef;
+  margin-top: 86px;
+}
+
+.content .hero-unit {
+  position: relative;
+}
+
+.content .hero-unit .resort-photo {
+  background-size: cover;
+  background-image: url(http://vimages.vresorts.in/1200x600/assets/campaign/goa-lp1.jpg);
+  height: 500px;
+}
+
+.content .hero-unit .description .slanted {
+  height: 500px;
+  position: absolute;
+  top: 0;
+  background: black;
+  width: 400px;
+  z-index: 10;
+}
+
+.content .hero-unit .description {
+  position: absolute;
+  top: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .content .hero-unit .description {
+    display: none;
+  }
+}
+
+.content .hero-unit .description .quote {
+  font-family: "Playfair Display", serif;
+  font-size: 2em;
+  color: white;
+  position: absolute;
+  padding-left: 40px;
+  top: 160px;
+  width: 300px;
+  z-index: 20;
+}
+
+.content .hero-unit .description .quote .offer {
+  font-size: 0.6em;
+  font-family: "Nunito", sans-serif;
+}
+
+.content .why-us {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.content .why-us .statement {
+  text-align: center;
+  font-size: 3em;
+}
+
+.content .why-us .our-testimony {
+  text-align: center;
+  width: 700px;
+  margin: auto;
+  font-size: 1.2em;
+}
+
+.content .info {
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  align-items: center;
+}
+
+.content .info .info-section.about {
+  padding: 40px;
+}
+
+.content .info .info-section.contact .reference {
+  margin: 20px;
+}
+
+.content .info .info-section.contact .connect {
+  width: 250px;
+  padding: 20px;
+  margin: 20px;
+  background: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .content .info .info-section.about {
+    padding: 0;
+  }
+  .content .info .info-section.contact .connect {
+    margin: 0 auto 20px !important;
+  }
+}
+
+.content .offerings {
+  background: mistyrose;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .content .offerings {
+    background: none;
+    border-bottom: 1px dashed black;
+    border-top: 1px dashed black;
+    padding-bottom: 0;
+  }
+}
+
+.content .offerings .features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .offerings .offering-title {
+  flex-basis: 100%;
+  padding-bottom: 40px;
+}
+
+.content .offerings .offering-title .title {
+  margin: 0;
+  font-size: 2em;
+}
+
+.content .offerings .offerings .feature .thumbnail {
+  margin-right: 10px;
+}
+
+.content .offerings .offerings .feature .details .about {
+  font-size: 14px;
+}
+
+.content .offerings .offerings .feature .details .title {
+  margin-top: 0;
+}
+
+.content .offerings .offerings .feature {
+  display: flex;
+  flex-basis: 32%;
+  margin-bottom: 50px;
+}
+
+/**
+ * footer
+ */
 footer {
-    background: black;
-    color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  background: black;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 footer .end-note {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer .end-note .about-us {
-    flex-basis: 60%;
+  flex-basis: 60%;
 }
 
 footer .end-note .social-links {
-    flex-basis: 30%;
+  flex-basis: 30%;
 }
 
 footer .end-note .social-links .link {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
 }
 
 footer .end-note .social-links .link .social-icon {
-    color: grey;
+  color: grey;
 }
