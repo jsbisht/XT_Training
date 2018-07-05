@@ -14,11 +14,17 @@ input[type="text"] {
     padding: 0 12px;
 }
 
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding: 0;
+    } 
+}
+
 @media only screen and (min-width: 768px) {
     .container {
         width: 700px;
-    }
-    
+    } 
 }
 
 @media only screen and (min-width: 992px) {
@@ -49,6 +55,9 @@ input[type="text"] {
     .flexible-child-t {
         flex-basis: 100% !important;
     }
+    .full-width-t {
+        width: 100% !important;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -60,17 +69,18 @@ input[type="text"] {
         flex-basis: 100% !important;
     }
 
-    .full-width {
-        width: 100%;
+    .full-width-m {
+        width: 100% !important;
     }
 }
 
 /**
  * STYLES
  */
-.page-container {
-    background: #efefef;
-    margin: auto;
+@media only screen and (max-width: 767px) {
+    header, footer, .content {
+        padding: 0 12px;
+    }
 }
 
 body {
@@ -110,8 +120,11 @@ header .identity .links {
 header .identity .links .link {
     display: inline;
     padding: 30px;
-    cursor: pointer;
+}
+
+header .identity .links .link a {
     color: white;
+    text-decoration: none;
 }
 
 header .identity .links .link:last-child {
@@ -129,8 +142,9 @@ header .identity .logo {
     font-family: 'Cinzel', cursive;
 }
 
-.content {   
-    margin-top: 88px;
+.content {
+    background: #efefef;
+    margin-top: 86px;
 }
 
 .content .hero-unit {
@@ -140,7 +154,16 @@ header .identity .logo {
 .content .hero-unit .resort-photo {
     background-size: cover;
     background-image: url(http://vimages.vresorts.in/1200x600/assets/campaign/goa-lp1.jpg);
-    height: 300px;
+    height: 500px;
+}
+
+.content .hero-unit .description .slanted {
+    height: 500px;
+    position: absolute;
+    top: 0;
+    background: black;
+    width: 400px;
+    z-index: 10;
 }
 
 .content .hero-unit .description {
@@ -160,7 +183,7 @@ header .identity .logo {
     color: white;
     position: absolute;
     padding-left: 40px;
-    top: 60px;
+    top: 160px;
     width: 300px;
     z-index: 20;
 }
@@ -170,9 +193,27 @@ header .identity .logo {
     font-family: 'Nunito', sans-serif;
 }
 
+.content .why-us {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.content .why-us .statement {
+    text-align: center;
+    font-size: 3em;
+}
+
+.content .why-us .our-testimony {
+    text-align: center;
+    width: 700px;
+    margin: auto;
+    font-size: 1.2em;
+}
+
 .content .info {
     display: flex;
     font-family: 'Nunito', sans-serif;
+    align-items: center;
 }
 
 .content .info .info-section.about {
@@ -192,7 +233,7 @@ header .identity .logo {
 
 @media only screen and (max-width: 767px) {
     .content .info .info-section.about {
-        padding: 20px 20px 20px 8px;
+        padding: 0;
     }
     .content .info .info-section.contact .connect {
         margin: 0 auto 20px !important;
@@ -214,17 +255,19 @@ header .identity .logo {
     color: white;
 }
 
-.slanted {
-    height: 300px;
-    position: absolute;
-    top: 0;
-    background: black;
-    width: 400px;
-    z-index: 10;
-}
-
 .offerings {
     background: mistyrose;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+    .offerings {
+        background: none;
+        border-bottom: 1px dashed black;
+        border-top: 1px dashed black;
+        padding-bottom: 0;
+    }
 }
 
 .offerings .features {
@@ -234,11 +277,12 @@ header .identity .logo {
 
 .offering-title {
     flex-basis: 100%;
+    padding-bottom: 40px;
 }
 
 .offering-title .title {
-    padding: 30px 0;
     margin: 0;
+    font-size: 2em;
 }
 
 .offerings .feature .thumbnail {
@@ -269,20 +313,34 @@ header .identity .logo {
 }
 
 .thumbnail .image {
-    background: url(img/thumb-fragment.jpg);
     height: 200px;
     width: 200px;
     background-repeat: no-repeat;
 }
 
+.thumbnail .image.location-1 {
+    background: url(http://vimages.vresorts.in/150x150/experience/5a183736e2b5024c578b460c/images/small/goa1000x1000-1511536438.jpg);
+}
+
+.thumbnail .image.location-2 {
+    background: url(https://vimages.vresorts.in/150x150/experience/5a140561e2b5024e578b4578/images/small/goacuisine1000x1000-1511261541.jpg);
+}
+
+.thumbnail .image.location-3 {
+    background: url(https://vimages.vresorts.in/150x150/experience/5a15487de2b50247598b4573/images/small/goaarts1000x1000-1511346290.jpg);
+}
+
 footer {
     background: black;
     color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 footer .end-note {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 footer .end-note .about-us {
@@ -297,4 +355,8 @@ footer .end-note .social-links .link {
     display: inline-block;
     height: 30px;
     width: 30px;
+}
+
+footer .end-note .social-links .link .social-icon {
+    color: grey;
 }
