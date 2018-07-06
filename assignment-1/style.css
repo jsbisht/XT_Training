@@ -120,7 +120,8 @@ input[type="text"] {
 .thumbnail .image {
   height: 200px;
   width: 200px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
 
 .thumbnail .image.location-1 {
@@ -310,6 +311,8 @@ header .identity .logo {
     border-bottom: 1px dashed black;
     border-top: 1px dashed black;
     padding-bottom: 0;
+    padding-top: 20px;
+    margin-top: 50px;
   }
 }
 
@@ -383,5 +386,34 @@ footer .end-note .social-links .link .social-icon {
 @media only screen and (max-width: 767px) {
   footer .end-note .social-links .links {
     text-align: center;
+  }
+}
+
+/**
+ * Mobile layout overrides
+ */
+@media only screen and (max-width: 767px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .why-us {
+    order: 1;
+  }
+  .hero-unit,
+  .offerings,
+  .info {
+    order: 2;
+  }
+
+  .content .offerings .feature {
+    margin: 0 -12px;
+    padding: 12px;
+  }
+  .content .offerings .feature:nth-child(odd) {
+    background: #f5deb3;
+  }
+  .content .offerings .feature:nth-child(even) {
+    background: #eeeeee;
   }
 }
