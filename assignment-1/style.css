@@ -280,6 +280,10 @@ header .identity .logo {
   background: linear-gradient(to right, #efefef, #f5f5dc);
 }
 
+.content .info .info-section.about .ameneties {
+  font-size: 2em;
+}
+
 .content .info .info-section.contact .reference {
   padding: 20px;
   text-align: center;
