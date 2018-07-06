@@ -272,27 +272,40 @@ header .identity .logo {
 .content .info {
   display: flex;
   font-family: "Nunito", sans-serif;
-  align-items: center;
+  align-items: stretch;
 }
 
 .content .info .info-section.about {
   padding: 40px;
+  background: linear-gradient(to right, #efefef, #f5f5dc);
 }
 
 .content .info .info-section.contact .reference {
-  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.content .info .info-section.contact .reference {
+  border-bottom: 1px dashed #555;
+}
+
+.content .info .info-section.contact .reference:last-child {
+  border-bottom: none;
 }
 
 .content .info .info-section.contact .connect {
-  width: 250px;
   padding: 20px;
-  margin: 20px;
-  background: white;
+  background: linear-gradient(to right, #ffffff, #efefef);
 }
 
 @media only screen and (max-width: 767px) {
   .content .info .info-section.about {
-    padding: 0;
+    padding: 12px;
+    margin: 0 -12px 20px;
+    background: #f5f5dc;
+  }
+  .content .info .info-section.contact {
+    margin: -12px;
   }
   .content .info .info-section.contact .connect {
     margin: 0 auto 20px !important;
@@ -313,6 +326,10 @@ header .identity .logo {
     padding-bottom: 0;
     padding-top: 20px;
     margin-top: 50px;
+  }
+
+  .content .offerings .offering-title {
+    padding-bottom: 10px !important;
   }
 }
 
@@ -407,13 +424,29 @@ footer .end-note .social-links .link .social-icon {
   }
 
   .content .offerings .feature {
+    border-bottom: 1px solid #cccccc;
     margin: 0 -12px;
     padding: 12px;
   }
-  .content .offerings .feature:nth-child(odd) {
-    background: #f5deb3;
+  .content .offerings .feature:last-child {
+    border: none;
   }
-  .content .offerings .feature:nth-child(even) {
-    background: #eeeeee;
+  .content .hero-unit .resort-photo {
+    height: 200px;
   }
+}
+
+.info-section {
+  flex-basis: 50%;
+}
+
+.reference {
+  height: 150px;
+}
+
+.reference .title {
+  margin: 0;
+}
+.reference .button-block {
+  margin: auto;
 }
