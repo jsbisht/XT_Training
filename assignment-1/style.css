@@ -241,7 +241,7 @@ header .identity .logo {
   color: white;
   position: absolute;
   padding-left: 40px;
-  top: 160px;
+  top: 120px;
   width: 300px;
   z-index: 20;
 }
@@ -328,19 +328,19 @@ header .identity .logo {
   font-size: 2em;
 }
 
-.content .offerings .offerings .feature .thumbnail {
+.content .offerings .feature .thumbnail {
   margin-right: 10px;
 }
 
-.content .offerings .offerings .feature .details .about {
+.content .offerings .feature .details .about {
   font-size: 14px;
 }
 
-.content .offerings .offerings .feature .details .title {
+.content .offerings .feature .details .title {
   margin-top: 0;
 }
 
-.content .offerings .offerings .feature {
+.content .offerings .feature {
   display: flex;
   flex-basis: 32%;
   margin-bottom: 50px;
@@ -378,4 +378,10 @@ footer .end-note .social-links .link {
 
 footer .end-note .social-links .link .social-icon {
   color: grey;
+}
+
+@media only screen and (max-width: 767px) {
+  footer .end-note .social-links .links {
+    text-align: center;
+  }
 }
